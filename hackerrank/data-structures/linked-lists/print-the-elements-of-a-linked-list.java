@@ -10,7 +10,7 @@
   }
 */
 
-void Print(Node head) {
+void Print (Node head) {
   if (head == null) return;
 
   Node current = head;
