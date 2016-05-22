@@ -2,4 +2,4 @@
 
 SELECT DISTINCT City
 FROM Station
-WHERE (Id % 2) = 0
+WHERE (Id % 2) = 0;
