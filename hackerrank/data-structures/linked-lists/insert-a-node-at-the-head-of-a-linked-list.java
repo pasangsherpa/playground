@@ -14,7 +14,10 @@ Node Insert (Node head, int x) {
   Node node = new Node();
   node.data = x;
 
-  if (head == null) head = node;
+  if (head == null) {
+    head = node;
+    return head;
+  }
 
   node.next = head;
   head = node;
