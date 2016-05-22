@@ -11,12 +11,10 @@
 */
 
 Node Insert (Node head, int data) {
-  Node newNode = new Node();
-  newNode.data = data;
+  Node node = new Node();
+  node.data = data;
 
-  if (head == null) {
-    head = newNode;
-  }
+  if (head == null) return node;
 
   Node current = head;
 
@@ -24,6 +22,6 @@ Node Insert (Node head, int data) {
     current = current.next;
   }
 
-  current.next = newNode;
+  current.next = node;
   return head;
 }
