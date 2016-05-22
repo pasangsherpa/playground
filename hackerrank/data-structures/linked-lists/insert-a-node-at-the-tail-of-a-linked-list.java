@@ -20,7 +20,6 @@ Node Insert (Node head, int data) {
   }
 
   Node current = head;
-
   while (current.next != null) {
     current = current.next;
   }
