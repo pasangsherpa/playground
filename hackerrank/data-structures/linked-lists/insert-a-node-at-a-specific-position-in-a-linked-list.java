@@ -6,8 +6,8 @@
   First element in the linked list is at position 0
   Node is defined as
   class Node {
-     int data;
-     Node next;
+    int data;
+    Node next;
   }
 */
 

@@ -4,8 +4,8 @@
   Delete Node at a given position in a linked list
   Node is defined as
   class Node {
-     int data;
-     Node next;
+    int data;
+    Node next;
   }
 */
 
