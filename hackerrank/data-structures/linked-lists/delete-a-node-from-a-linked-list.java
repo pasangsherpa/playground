@@ -20,6 +20,7 @@ Node Delete (Node head, int position) {
 
   Node previous = null;
   Node current = head;
+
   while (current != null && position != 0) {
     previous = current;
     current = current.next;

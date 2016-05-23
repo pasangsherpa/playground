@@ -23,6 +23,7 @@ Node InsertNth (Node head, int data, int position) {
 
   Node previous = null;
   Node current = head;
+
   while (current != null && position != 0) {
     previous = current;
     current = current.next;
