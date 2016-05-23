@@ -5,8 +5,8 @@
   The input list will have at least one element
   Node is defined as
   class Node {
-     int data;
-     Node next;
+    int data;
+    Node next;
   }
 */
 
