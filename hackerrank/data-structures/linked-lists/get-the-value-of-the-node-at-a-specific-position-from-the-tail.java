@@ -34,6 +34,5 @@ int GetNode (Node head, int n) {
     index--;
   }
 
-  // node doesn't exist
   return current.data;
 }
