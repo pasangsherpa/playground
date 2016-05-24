@@ -27,7 +27,7 @@ Node Reverse (Node head) {
       head = current;
     }
 
-    // move current pointer
+    // move to next node
     current = next;
   }
 
