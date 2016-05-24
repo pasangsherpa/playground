@@ -22,13 +22,13 @@ Node Reverse (Node head) {
     current.next = current.prev;
     current.prev = next;
 
-    // set current node to be new head
-    if (current.prev == null) {
+    // set tail to be the head
+    if (next == null) {
       head = current;
     }
 
     // move current pointer
-    current = current.prev;
+    current = next;
   }
 
   return head;
