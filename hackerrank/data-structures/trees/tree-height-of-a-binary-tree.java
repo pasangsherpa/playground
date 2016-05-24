@@ -9,6 +9,16 @@
   }
 */
 
+int countLongestRootToNodes (Node root) {
+  if (root == null) return 0;
+
+  int left = countLongestRootToNodes(root.left);
+  int right = countLongestRootToNodes(root.right);
+
+  return 1 + Math.max(left, right);
+}
+
 int height (Node root) {
-  return (root == null) ? 0 : 1 + Math.max(height(root.left), height(root.right));
+  // total edges = total nodes - 1
+  return countLongestRootToNodes(root) - 1;
 }
