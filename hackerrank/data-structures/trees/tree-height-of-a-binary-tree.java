@@ -10,14 +10,5 @@
 */
 
 int height (Node root) {
-  int height = 0;
-
-  Node current = root;
-
-  while (current != null) {
-    current = current.left;
-    height++;
-  }
-
-  return height;
+  return (root == null) ? 0 : 1 + Math.max(height(root.left), height(root.right));
 }
