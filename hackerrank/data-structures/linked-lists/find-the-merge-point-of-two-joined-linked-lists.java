@@ -44,7 +44,7 @@ int FindMergeNode (Node headA, Node headB) {
   }
 
   // both lists are of same length now
-  while (currentA != null && currentB != null) {
+  while (currentA != null) {
     if (currentA == currentB) break;
 
     currentA = currentA.next;
