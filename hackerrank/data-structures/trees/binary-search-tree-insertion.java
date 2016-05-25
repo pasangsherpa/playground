@@ -49,9 +49,9 @@ static Node InsertRecursive (Node root, int value) {
   }
 
   if (value > root.data) {
-    root.right = InsertRecursive (root.right, value);
+    root.right = InsertRecursive(root.right, value);
   } else {
-    root.left = InsertRecursive (root.left, value);
+    root.left = InsertRecursive(root.left, value);
   }
 
   return root;
