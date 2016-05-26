@@ -7,11 +7,10 @@ public class Solution {
   private static final int ALPHABETS_COUNT = 26;
 
   private static boolean isPangram (String str) {
+    if (str.length() <= ALPHABETS_COUNT) return false;
+
     boolean isPangram = true;
-    int length = str.length();
-
-    if (length <= ALPHABETS_COUNT) return false;
-
+    // initialized with all bits false
     boolean[] alphabets = new boolean[ALPHABETS_COUNT];
 
     for (char c: str.toCharArray()) {
