@@ -3,7 +3,6 @@
 import java.util.*;
 
 public class Solution {
-
   private static int getAbsoluteDiagonalDiff(int[][] matrix) {
     int primarySum, secondarySum;
     primarySum = secondarySum = 0;
