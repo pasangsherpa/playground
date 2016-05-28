@@ -26,25 +26,23 @@ public class Abbreviation {
   private Map<String, List<String>> abbrevMap = new HashMap<String, List<String>>();
 
   public Abbreviation(String[] dictionary) {
-    populateAbbrevMap(dictionary);
+    load(dictionary);
   }
 
-  private void populateAbbrevMap(String[] dictionary) {
+  private void load(String[] dictionary) {
     for (String word : dictionary) {
-      insertAbbrev(word);
+      insert(word);
     }
   }
 
-  public String insertAbbrev(String word) {
+  public boolean insert(String word) {
     String abbrev = getAbbrev(word);
-    List<String> words = abbrevMap.get(abbrev);
 
-    if (words == null) words = new LinkedList<String>();
-    words.add(word);
+    if (!abbrevMap.containsKey(abbrev)) {
+      abbrevMap.put(abbrev, new LinkedList<String>());
+    }
 
-    abbrevMap.put(abbrev, words);
-
-    return word;
+    return abbrevMap.get(abbrev).add(word);
   }
 
   public String getAbbrev(String word) {
