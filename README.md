@@ -8,7 +8,7 @@ ______ |  | _____  ___.__. ___________  ____  __ __  ____    __| _/
 ```
 ---
 
-> A repository to put all my programming practice code
+> :sparkles: A place to store all my programming practice code :sparkles:
 
 ## License
 
