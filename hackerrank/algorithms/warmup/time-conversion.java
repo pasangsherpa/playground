@@ -7,11 +7,8 @@ public class Solution {
     String period = time.substring(8, time.length());
     int hour = Integer.parseInt(time.substring(0, 2));
 
-    if (period.equals("PM")) {
-      hour += 12;
-    } else {
-      if (hour == 12) hour = 0;
-    }
+    hour = hour == 12 ? 0 : hour; // midnight|noon
+    if (period.equals("PM")) hour += 12; // add 12 hrs
 
     return String.format("%02d", hour) + time.substring(2, 8);
   }
