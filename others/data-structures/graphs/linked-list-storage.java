@@ -73,13 +73,12 @@ public class Graph {
 
   private void dfs(int vertexId, boolean[] hasVisitedList) {
     hasVisitedList[vertexId] = true;
-    System.out.println("visiting" + vertices[vertexId].name);
+    System.out.println("Visiting " + vertices[vertexId].name);
 
     Neighbor current = vertices[vertexId].neighbor;
     while (current != null) {
       if (!hasVisitedList[current.vertexId]) {
-
-        System.out.println("\n"+ vertices[vertexId].name + "--" + vertices[current.vertexId].name);
+        System.out.println("\n"+ vertices[vertexId].name + " -- " + vertices[current.vertexId].name);
         dfs(current.vertexId, hasVisitedList);
       }
       current = current.next;
