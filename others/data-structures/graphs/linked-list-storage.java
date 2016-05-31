@@ -35,6 +35,7 @@ public class Graph {
     this.vertices = vertices;
   }
 
+  // see `resources/facebook.txt` for example file
   public static Vertex[] loadFromFile(String filename) throws FileNotFoundException {
     Scanner in = new Scanner(new File(filename));
     String graphType = in.next();
@@ -61,7 +62,31 @@ public class Graph {
     return vertices;
   }
 
-  private void print() {
+  public void dfs() {
+    boolean[] hasVisitedList = new boolean[vertices.length];
+
+    int index = 0;
+    for (boolean hasVisited : hasVisitedList) {
+      if (!hasVisited) dfs(index, hasVisitedList);
+    }
+  }
+
+  private void dfs(int vertexId, boolean[] hasVisitedList) {
+    hasVisitedList[vertexId] = true;
+    System.out.println("visiting" + vertices[vertexId].name);
+
+    Neighbor current = vertices[vertexId].neighbor;
+    while (current != null) {
+      if (!hasVisitedList[current.vertexId]) {
+
+        System.out.println("\n"+ vertices[vertexId].name + "--" + vertices[current.vertexId].name);
+        dfs(current.vertexId, hasVisitedList);
+      }
+      current = current.next;
+    }
+  }
+
+  public void print() {
     Neighbor current = null;
     for (Vertex v : vertices) {
       System.out.print(v.name);
@@ -87,6 +112,8 @@ public class Graph {
       vertices = Graph.loadFromFile(in.nextLine());
       Graph graph = new Graph(vertices);
       graph.print();
+      graph.dfs();
+
       in.close();
     } catch (FileNotFoundException e) {
       e.printStackTrace();
