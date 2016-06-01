@@ -3,26 +3,27 @@
 import java.io.*;
 
 public class Solution {
-
-  private static final int ALPHABET_COUNT = 26;
+  private static final byte ALPHABET_COUNT = 26;
+  private static final byte ASCII_ALPHABET_OFFSET = 97;
 
   private static boolean isPangram (String str) {
     if (str.length() < ALPHABET_COUNT) return false;
 
     boolean isPangram = true;
     // initialized with all bits false
-    boolean[] alphabet = new boolean[ALPHABET_COUNT];
+    boolean[] alphabetBitMap = new boolean[ALPHABET_COUNT];
+    int index;
 
     for (char c: str.toCharArray()) {
-      int index = c - 'a'; // normalize ascii val to 0 based
+      index = c - ASCII_ALPHABET_OFFSET; // normalize ascii val to 0 based
       // enable bit in alphabet
       if (index >= 0 && index < ALPHABET_COUNT) {
-        alphabet[index] |= true;
+        alphabetBitMap[index] |= true;
       }
     }
 
     // if all 26 bits is set, it's pangram
-    for (boolean alphabetPresent: alphabet) {
+    for (boolean alphabetPresent: alphabetBitMap) {
       isPangram &= alphabetPresent;
     }
 
