@@ -1,12 +1,12 @@
-import java.util.LinkedList;
-import java.util.Queue;
-import java.util.Scanner;
-
 /**
  * A simple moving average is a method for computing an average of a stream of
  * numbers by only averaging the last P numbers from the stream, where P is
  * known as the period.
  */
+
+import java.util.LinkedList;
+import java.util.Queue;
+import java.util.Scanner;
 
 public class MovingAverage {
   private int period;
@@ -21,8 +21,8 @@ public class MovingAverage {
     sum += num;
     window.add(num);
 
-    // if window size greater than period, evict the first
-    // number and fix the sum
+    // if window size greater than period,
+    // evict the first number and fix the sum
     if (window.size() > period) {
       sum -= window.remove();
     }
