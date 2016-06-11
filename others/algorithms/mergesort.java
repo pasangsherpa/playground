@@ -9,9 +9,9 @@
  * Sorted array in increasing order is displayed to the user.
  *
  * Constraints:
- * 1 <=T<= 50
- * 1 <=N<= 1000
- * 1 <=arr[i]<= 1000
+ * 1 <= T <= 50
+ * 1 <= N <= 1000
+ * 1 <= arr[i] <= 1000
  *
  *
  * Example:
