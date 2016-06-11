@@ -1,5 +1,5 @@
 /**
- * The task is to complete merge() function which is used to implement Merge Sort.
+ * The task is to implement Merge Sort, a Divide and Conquer algorithm.
  *
  * Input:
  * First line of the input denotes number of test cases 'T'. First line of the test
