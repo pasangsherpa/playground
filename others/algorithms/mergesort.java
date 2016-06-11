@@ -1,5 +1,3 @@
-package google;
-
 /**
  * The task is to complete merge() function which is used to implement Merge Sort.
  *
