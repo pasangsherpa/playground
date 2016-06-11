@@ -13,7 +13,6 @@
  * 1 <= N <= 1000
  * 1 <= arr[i] <= 1000
  *
- *
  * Example:
  * Input:
  * 2
@@ -25,7 +24,6 @@
  * Output:
  * 1 3 4 7 9
  * 1 2 3 4 5 6 7 8 9 10
- *
  */
 
 import java.util.Scanner;
