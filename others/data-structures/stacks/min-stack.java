@@ -1,7 +1,8 @@
 import java.util.Stack;
 
 /**
- * Design a stack that supports push, pop, peek, and retrieving the minimum element in constant time.
+ * Design a generic stack that supports push, pop, peek, and retrieving
+ * the minimum element in constant time.
  *
  * push(x) -- Adds the given item to the top of the stack.
  * pop() -- Removes the top item from the stack and returns it.
