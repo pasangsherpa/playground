@@ -1,8 +1,7 @@
 import java.util.Stack;
 
 /**
- * Design a generic stack that supports push, pop, peek, and retrieving
- * the minimum element in constant time.
+ * Design a stack that supports push, pop, peek, and retrieving the minimum element in constant time.
  *
  * push(x) -- Adds the given item to the top of the stack.
  * pop() -- Removes the top item from the stack and returns it.
@@ -91,13 +90,15 @@ class MinStack<T extends Comparable<? super T>> implements StackADT<T> {
 
   public static void main(String[] args) {
     MinStack<Integer> minStack = new MinStack<Integer>();
+    System.out.println(minStack.size());   // --> Prints 0
     minStack.push(-2);
     minStack.push(0);
     minStack.push(-3);
-    System.out.println(minStack.getMin()); //--> Returns -3.
+    System.out.println(minStack.size());   // --> Prints 3
+    System.out.println(minStack.getMin()); // --> Prints -3
     minStack.pop();
-    System.out.println(minStack.peek()); //--> Returns 0.
-    System.out.println(minStack.getMin()); //--> Returns -2.
+    System.out.println(minStack.peek());   // --> Prints 0
+    System.out.println(minStack.getMin()); // --> Prints -2
   }
 }
 
