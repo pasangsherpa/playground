@@ -1,5 +1,3 @@
-package google;
-
 import java.util.Stack;
 
 /**
