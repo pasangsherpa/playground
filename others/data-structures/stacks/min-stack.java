@@ -90,15 +90,18 @@ class MinStack<T extends Comparable<? super T>> implements StackADT<T> {
 
   public static void main(String[] args) {
     MinStack<Integer> minStack = new MinStack<Integer>();
-    System.out.println(minStack.size());   // --> Prints 0
+    System.out.println(minStack.size());    // --> Prints 0
+    System.out.println(minStack.isEmpty()); // --> Prints true
     minStack.push(-2);
     minStack.push(0);
     minStack.push(-3);
-    System.out.println(minStack.size());   // --> Prints 3
-    System.out.println(minStack.getMin()); // --> Prints -3
+    System.out.println(minStack.isEmpty()); // --> Prints false
+    System.out.println(minStack.size());    // --> Prints 3
+    System.out.println(minStack.getMin());  // --> Prints -3
     minStack.pop();
-    System.out.println(minStack.peek());   // --> Prints 0
-    System.out.println(minStack.getMin()); // --> Prints -2
+    System.out.println(minStack.peek());    // --> Prints 0
+    System.out.println(minStack.getMin());  // --> Prints -2
+    minStack.pop();
+    System.out.println(minStack.getMin());  // --> Prints -2
   }
 }
-
