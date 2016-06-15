@@ -22,7 +22,7 @@ public class KthSmallest {
 
     int kthSmallest = -1;
     while (k-- > 0) {
-      kthSmallest = q.remove();
+      kthSmallest = q.poll();
     }
 
     return kthSmallest;
