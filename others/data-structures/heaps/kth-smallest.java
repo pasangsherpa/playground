@@ -14,13 +14,13 @@ import java.util.Queue;
 
 public class KthSmallest {
   public static int kthSmallest(int[] nums, int k) {
+    int kthSmallest = -1;
     Queue<Integer> q = new PriorityQueue<Integer>();
 
     for (int num: nums) {
       q.offer(num);
     }
 
-    int kthSmallest = -1;
     while (k-- > 0) {
       kthSmallest = q.poll();
     }
