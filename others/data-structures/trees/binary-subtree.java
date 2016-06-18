@@ -36,7 +36,6 @@ public class SubTree {
 
   private static String inorder(Node tree, String str) {
     if (tree == null) return "";
-
     return inorder(tree.left, str) + tree.element + inorder(tree.right, str);
   }
 
